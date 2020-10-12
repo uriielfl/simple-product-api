@@ -47,7 +47,7 @@ Ok! Our Api is runing!
 ###### - Let's make a new register.
 We'll use the POST command on our terminal to make a new register.
 ```
-yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/products
+yourpc>$ curl -d '{"name":"mesa"}' -H "Content-Type: application/json" -X POST http://localhost:8000/products
 ```
 
 
@@ -61,12 +61,13 @@ We'll use the GET command on our terminal to see the values inside.
 ```
 yourpc>$ curl -X GET http://127.0.0.1:8000/products
 ```
+
 ### Using methods in /product-images/:
 
 ###### - Let's make a new register.
 We'll use the POST command on our terminal to make a new register.
 ```
-yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/product-images
+yourpc>$ curl -d '{"productId":"2","image":"www.yourimagelink.com/directorymesa"}' -H "Content-Type: application/json" -X POST http://localhost:8000/product-images
 ```
 
 ###### - Let's make a new register( json file).
@@ -74,6 +75,7 @@ We'll use the POST command on our terminal to make a new register with a json fi
 ```
 yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/product-images
 ```
+#### PS: To make any image register, you will need to first create a register in /products/ and choose an existing id.
 ###### - Let's consume our api
 We'll use the GET command on our terminal to see the values inside.
 ```
