@@ -42,5 +42,41 @@ Quit the server with CTRL-BREAK.
 ```
 
 Ok! Our Api is runing!
+### Using methods in /products/:
 
+###### - Let's make a new register.
+We'll use the POST command on our terminal to make a new register.
+```
+yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/products
+```
+
+
+###### - Let's make a new register(json file).
+We'll use the POST command on our terminal to make a new register with a json file.
+```
+yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/products
+```
+###### - Let's consume our api
+We'll use the GET command on our terminal to see the values inside.
+```
+yourpc>$ curl -X GET http://127.0.0.1:8000/products
+```
+### Using methods in /product-images/:
+
+###### - Let's make a new register.
+We'll use the POST command on our terminal to make a new register.
+```
+yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/product-images
+```
+
+###### - Let's make a new register( json file).
+We'll use the POST command on our terminal to make a new register with a json file.
+```
+yourpc>$ curl -X POST -H "Content-Type: application/json" -d @../data/product.json http://127.0.0.1:8000/product-images
+```
+###### - Let's consume our api
+We'll use the GET command on our terminal to see the values inside.
+```
+yourpc>$ curl -X GET http://127.0.0.1:8000/product-images
+```
 
